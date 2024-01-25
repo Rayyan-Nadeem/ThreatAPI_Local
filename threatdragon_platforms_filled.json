@@ -1,0 +1,981 @@
+{
+  "version": "2.0.2",
+  "summary": {
+    "title": "MIPSA",
+    "owner": "Imran Shah",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "MIPSA STRIDE TM Diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.0.2",
+        "description": "The Marine Information for Safety and Law Enforcement (MISLE) is a database system managed and used by the U.S. Coast Guard (USCG). MISLE is used to store data on marine accidents, pollution incidents, search and rescue cases, law enforcement activities, and vessel inspections/examinations.  The public may access portions of the data contained on the MISLE system through the Port State Information eXchange (PSIX). Currently, it contains information on over 650,000 U.S. and foreign flagged vessel including nearly 80,000 Commercial Fishing Vessels. The information found in PSIX represents a weekly snapshot of Freedom of Information Act (FOIA) data on U.S. flag vessels, foreign vessels operating in U.S. waters, and Coast Guard contacts with those vessels. Information on unclosed cases, investigations, or cases pending further action is considered privileged information and is precluded from the PSIX system.",
+        "cells": [
+          {
+            "position": {
+              "x": 199.9999999999991,
+              "y": 130.62500000000253
+            },
+            "size": {
+              "width": 710,
+              "height": 332.81249999999994
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "CGOne"
+              }
+            },
+            "zIndex": -1,
+            "id": "19854e69-a4a8-42a1-ad1c-f0ca53e73ffd",
+            "data": {
+              "name": "CGOne",
+              "summary": "",
+              "platforms": "",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.BoundaryBox",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "status": "incomplete"
+          },
+          {
+            "position": {
+              "x": 360,
+              "y": 150
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "MIPSA \nWeb\nApplication"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "id": "15bdaffe-8b4b-45b5-8eda-f00c5547726e",
+            "data": {
+              "name": "MIPSA \nWeb\nApplication",
+              "summary": "",
+              "platforms": "Windows",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Process",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 33.5,
+              "y": 130.62500000000057
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "USCG iPad"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 2,
+            "id": "67e045fd-61d3-4e9a-951d-f5988aebee0d",
+            "data": {
+              "name": "USCG iPad",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Actor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 59.75,
+              "y": 388
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure AD"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 3,
+            "id": "2e3459b9-6edf-498b-b8d4-e2b0c6485444",
+            "data": {
+              "name": "Azure AD",
+              "summary": "United States Coast Guard cloud Active Directory service used for authentication.",
+              "platforms": "PRE, Azure AD",
+              "permissions_required": "User",
+              "data_sources": "Active Directory, Domain Name, Logon Session",
+              "defenses_bypassed": "Anti-virus, Digital Certificate Validation, Windows User Account Control, Host intrusion prevention systems, System Access Controls, Signature-based detection",
+              "type": "tm.Process",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Authentication\nResponse",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "1e2dfd80-42a9-4ca1-929d-7725a7c01360",
+            "labels": [
+              "Authentication\nResponse"
+            ],
+            "source": {
+              "cell": "2e3459b9-6edf-498b-b8d4-e2b0c6485444"
+            },
+            "target": {
+              "x": 130,
+              "y": 190
+            },
+            "vertices": [
+              {
+                "x": 150,
+                "y": 300
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Authentication \nRequest",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "57a46882-5bdc-45cf-885b-3e169c1a4ea6",
+            "labels": [
+              "Authentication \nRequest"
+            ],
+            "source": {
+              "x": 80,
+              "y": 190
+            },
+            "target": {
+              "cell": "2e3459b9-6edf-498b-b8d4-e2b0c6485444"
+            },
+            "vertices": [
+              {
+                "x": 50,
+                "y": 270
+              },
+              {
+                "x": 50,
+                "y": 350
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Authentication\nResponse",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "22b1bf04-59e5-4f94-ad84-6a6bf4c0b16c",
+            "labels": [
+              "Authentication\nResponse"
+            ],
+            "source": {
+              "cell": "adb668bd-aebc-4550-ac99-4c88d8f6a011"
+            },
+            "target": {
+              "cell": "c2b16b27-38c1-4f9d-99ba-bde4115df2e7"
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 400
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Authentication\nRequest",
+              "summary": "",
+              "platforms": "macOS",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "fa08abe5-56d4-441c-be6b-6da353818e8f",
+            "labels": [
+              "Authentication\nRequest"
+            ],
+            "source": {
+              "cell": "c2b16b27-38c1-4f9d-99ba-bde4115df2e7"
+            },
+            "target": {
+              "cell": "adb668bd-aebc-4550-ac99-4c88d8f6a011"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 380
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "HTTPS \nRequest",
+              "summary": "",
+              "platforms": "Windows",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "df1f1d20-39a6-4385-924c-f1a9ef9bedd0",
+            "labels": [
+              "HTTPS \nRequest"
+            ],
+            "source": {
+              "cell": "c2b16b27-38c1-4f9d-99ba-bde4115df2e7"
+            },
+            "target": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 270
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "HTTPS Response",
+              "summary": "",
+              "platforms": "Windows",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "c338eb5e-5c52-4152-88ca-2f19d68b0f55",
+            "labels": [
+              "HTTPS Response"
+            ],
+            "source": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "target": {
+              "cell": "67e045fd-61d3-4e9a-951d-f5988aebee0d"
+            },
+            "vertices": [
+              {
+                "x": 230,
+                "y": 215
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "HTTPS Request",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "3491aad1-cc99-4ca2-9c34-294d04a1e252",
+            "labels": [
+              "HTTPS Request"
+            ],
+            "source": {
+              "cell": "67e045fd-61d3-4e9a-951d-f5988aebee0d"
+            },
+            "target": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "vertices": [
+              {
+                "x": 325,
+                "y": 146
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Request",
+              "summary": "",
+              "platforms": "Linux",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "808656f2-6d09-4f0d-b7a6-bade110e87da",
+            "labels": [
+              "Request"
+            ],
+            "source": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "target": {
+              "cell": "e26cac15-5d4b-4c54-a484-4cda2860e701"
+            },
+            "vertices": [
+              {
+                "x": 550,
+                "y": 170
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Response",
+              "summary": "",
+              "platforms": "Linux",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "57c22c29-f25a-4590-9b98-9b8a027a2a4f",
+            "labels": [
+              "Response"
+            ],
+            "source": {
+              "cell": "e26cac15-5d4b-4c54-a484-4cda2860e701"
+            },
+            "target": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 220
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Request",
+              "summary": "",
+              "platforms": "macOS",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "2f7f630d-de94-45df-84d7-b965637c2594",
+            "labels": [
+              "Request"
+            ],
+            "source": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "target": {
+              "cell": "8cc69027-2873-4638-8d9d-12bf325405ca"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 280
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "Response",
+              "summary": "",
+              "platforms": "PRE",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "9f89758e-ac16-433d-b520-aaf216d77780",
+            "labels": [
+              "Response"
+            ],
+            "source": {
+              "cell": "8cc69027-2873-4638-8d9d-12bf325405ca"
+            },
+            "target": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "vertices": [
+              {
+                "x": 560,
+                "y": 358
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1,
+                "targetMarker": {
+                  "name": "classic"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "name": "HTTPS\nResponse",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "HTTPS",
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "58f5209a-78f2-4dec-90f6-1735522708de",
+            "labels": [
+              "HTTPS\nResponse"
+            ],
+            "source": {
+              "cell": "15bdaffe-8b4b-45b5-8eda-f00c5547726e"
+            },
+            "target": {
+              "cell": "c2b16b27-38c1-4f9d-99ba-bde4115df2e7"
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": 260
+              }
+            ],
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 353.75,
+              "y": 298
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "USCG \nWorkstation"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 11,
+            "id": "c2b16b27-38c1-4f9d-99ba-bde4115df2e7",
+            "data": {
+              "name": "USCG \nWorkstation",
+              "summary": "United States Coast Guard issued and maintained workstation",
+              "platforms": "Windows, Azure AD",
+              "permissions_required": "User, Administrator",
+              "data_sources": "Windows Registry, User Account",
+              "defenses_bypassed": "Anti-virus, File monitoring, Host intrusion prevention systems, Signature-based detections",
+              "type": "tm.Actor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 375,
+              "y": 393.4375000000025
+            },
+            "size": {
+              "width": 70,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "USCG \nAD"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 12,
+            "id": "adb668bd-aebc-4550-ac99-4c88d8f6a011",
+            "data": {
+              "name": "USCG \nAD",
+              "summary": "United States Coast Guard on premises Active Directory service used for authentication.",
+              "platforms": "Azure AD",
+              "permissions_required": "User, Administrator",
+              "data_sources": "Active Directory, Domain Name, Logon Session",
+              "defenses_bypassed": "Anti-virus, Digital Certificate Validation, Windows User Account Control, Host intrusion prevention systems, System Access Controls, Signature-based detection",
+              "type": "tm.Process",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 636,
+              "y": 190
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "TMT Database"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 13,
+            "id": "e26cac15-5d4b-4c54-a484-4cda2860e701",
+            "data": {
+              "name": "TMT Database",
+              "summary": "",
+              "platforms": "Linux",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          },
+          {
+            "position": {
+              "x": 626,
+              "y": 328
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "MIPSA NoSQL \nDatabase"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 14,
+            "id": "8cc69027-2873-4638-8d9d-12bf325405ca",
+            "data": {
+              "name": "MIPSA NoSQL \nDatabase",
+              "summary": "",
+              "platforms": "Azure AD",
+              "permissions_required": "",
+              "data_sources": "",
+              "defenses_bypassed": "",
+              "type": "tm.Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "status": "complete"
+          }
+        ]
+      }
+    ],
+    "diagramTop": 3,
+    "reviewer": "",
+    "threatTop": 19
+  }
+}
